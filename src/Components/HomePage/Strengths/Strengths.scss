@@ -1,0 +1,15 @@
+@import "../../../variables";
+
+#strength-section {
+  width: 100%;
+  height: 10cm;
+  background: $--color-blue800;
+  margin-top: 50%;
+}
+
+#strength-divider {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-98%);
+}

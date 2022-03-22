@@ -1,6 +1,7 @@
 import { Stack } from "@mui/material";
-import ParticleBackground from "../../../ParticleBackground";
+import ParticleBackground from "./ParticleBackground";
 import TypewriterComponent from "typewriter-effect";
+import Timmy from "./Timmy/Timmy";
 
 function HeroSection() {
   return (
@@ -31,6 +32,8 @@ function HeroSection() {
         <h6>FULLSTACK DEVELOPER</h6>
         <h6>21 YEARS OLD</h6>
       </Stack>
+
+      <Timmy />
     </>
   );
 }

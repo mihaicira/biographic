@@ -38,12 +38,6 @@ h1 {
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
-  &::after {
-    -webkit-text-stroke-width: 0;
-    -webkit-text-stroke-color: none;
-    color: white;
-    font-weight: 200;
-  }
 }
 h2 {
   font-size: 4rem;

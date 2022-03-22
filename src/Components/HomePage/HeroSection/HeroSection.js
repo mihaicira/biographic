@@ -13,6 +13,9 @@ function HeroSection() {
           position: "absolute",
           top: "30%",
           left: "10%",
+          ["@media (max-width:800px)"]: {
+            top: "5%",
+          },
         }}
       >
         <h1>

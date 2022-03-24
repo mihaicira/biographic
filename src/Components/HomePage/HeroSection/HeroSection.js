@@ -22,7 +22,7 @@ function HeroSection() {
           <TypewriterComponent
             options={{
               strings: [
-                "Mihai Cîra",
+                "I am Mihai Cîra",
                 "Web developer",
                 "Mobile developer",
                 "Problem solver",
@@ -36,7 +36,7 @@ function HeroSection() {
         <h6>21 YEARS OLD</h6>
       </Stack>
 
-      <Timmy />
+      {/* <Timmy /> */}
     </>
   );
 }

@@ -3,25 +3,42 @@ import { Stack } from "@mui/material";
 import { useState, useRef } from "react";
 
 export default function Carousel(props) {
-  const [currentCard, setCurrentCard] = useState(
+  const [currentCardIdx, setCurrentCardIdx] = useState(
     Math.floor(props.cards.length / 2)
   );
-  const previousDisplayCard = useRef();
-  const currentDisplayCard = useRef();
-  const nextDisplayCard = useRef();
 
-  const previousId = (nr) => {
-    return currentCard - 1 == -1 ? 6 : currentCard - 1;
+  const prevRef = useRef();
+  const currentRef = useRef();
+  const nextRef = useState();
+
+  const calcBehindIndex = () => {
+    if (currentCardIdx == 0) return props.cards.length - 1;
+    return currentCardIdx - 1;
   };
 
-  const nextId = (nr) => {
-    // console.log((currentCard + 1) % props.cards.length);
-    return (currentCard + 1) % props.cards.length;
+  const calcForwardIndex = () => {
+    return (currentCardIdx + 1) % (props.cards.length - 1);
   };
 
-  const changeToNextCard = () => {
-    setCurrentCard(nextId);
+  const prevCard = () => {
+    return props.cards[calcBehindIndex()];
   };
+
+  const currentCard = () => {
+    return props.cards[currentCardIdx];
+  };
+
+  const nextCard = () => {
+    return props.cards[calcForwardIndex()];
+  };
+
+  function goForward() {
+    setCurrentCardIdx(calcForwardIndex());
+  }
+
+  function goBackwards() {
+    setCurrentCardIdx(calcBehindIndex());
+  }
 
   return (
     <>
@@ -30,48 +47,34 @@ export default function Carousel(props) {
         justifyContent="center"
         className="strength-carousel"
       >
-        <Card
-          title={props.cards[previousId()].title}
-          img={props.cards[previousId()].img}
-          text={props.cards[previousId()].text}
-          key={props.cards[previousId()].title}
-          ref={previousDisplayCard}
-          onClick={() => {
-            console.log("helo");
-          }}
-        />
-        <Card
-          title={props.cards[currentCard].title}
-          img={props.cards[currentCard].img}
-          text={props.cards[currentCard].text}
-          key={props.cards[currentCard].title}
-          ref={currentDisplayCard}
-          onClick={() => {
-            console.log("helo");
-          }}
-        />
-        <Card
-          title={props.cards[nextId()].title}
-          img={props.cards[nextId()].img}
-          text={props.cards[nextId()].text}
-          key={props.cards[nextId()].title}
-          ref={nextDisplayCard}
-          onClick={changeToNextCard}
-        />
+        <Stack
+          className="strength-card"
+          gap="1rem"
+          ref={prevRef}
+          onClick={goBackwards}
+        >
+          <img src={prevCard().img} alt="brave" />
+          <h6>{prevCard().title}</h6>
+          <p>{prevCard().text}</p>
+        </Stack>
+
+        <Stack className="strength-card" gap="1rem" ref={currentRef}>
+          <img src={currentCard().img} alt="brave" />
+          <h6>{currentCard().title}</h6>
+          <p>{currentCard().text}</p>
+        </Stack>
+
+        <Stack
+          className="strength-card"
+          gap="1rem"
+          ref={nextRef}
+          onClick={goForward}
+        >
+          <img src={nextCard().img} alt="brave" />
+          <h6>{nextCard().title}</h6>
+          <p>{nextCard().text}</p>
+        </Stack>
       </Stack>
     </>
   );
 }
-
-const Card = (props) => (
-  <Stack
-    className="strength-card"
-    gap="1rem"
-    onClick={props.onClick}
-    ref={props.ref}
-  >
-    <img src={props.img} alt="brave" />
-    <h6>{props.title}</h6>
-    <p>{props.text}</p>
-  </Stack>
-);

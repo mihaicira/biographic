@@ -6,8 +6,7 @@ import Passionate from "../../../assets/img/passionate.png";
 import Teamplayer from "../../../assets/img/teamplayer.png";
 import Empathetic from "../../../assets/img/empathetic.png";
 import { Typography } from "@mui/material";
-// import Carousel from "./Carousel";
-import Carousel from "nuka-carousel";
+import Carousel from "./Carousel";
 
 function Strengths() {
   const cards = [
@@ -34,7 +33,7 @@ function Strengths() {
     {
       img: Empathetic,
       title: "Empathetic",
-      text: "If you believe that emotions are what makes us humans and being in other’s shoes sometimes can make you change perspective.",
+      text: "You believe that emotions are what makes us humans and being in other’s shoes sometimes can make you change perspective.",
     },
   ];
 
@@ -49,15 +48,7 @@ function Strengths() {
           STRENGTHS
         </Typography>
 
-        {/* <Carousel cards={cards} /> */}
-        <Carousel>
-          <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide1" />
-          <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide2" />
-          <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide3" />
-          <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide4" />
-          <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide5" />
-          <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide6" />
-        </Carousel>
+        <Carousel cards={cards} />
       </div>
     </>
   );

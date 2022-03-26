@@ -11,26 +11,31 @@ import Carousel from "./Carousel";
 function Strengths() {
   const cards = [
     {
+      id: 0,
       img: Brave,
       title: "Brave",
       text: "You think out of the box and you are not afraid to stand up and share your ideas",
     },
     {
+      id: 1,
       img: Frank,
       title: "Frank",
       text: "You believe that speaking clearly is the key for great communication and you are open to constructive feedback. Don’t be touchy, be smart! You can always improve yourself",
     },
     {
+      id: 2,
       img: Passionate,
       title: "Passionate",
       text: "Love for technology burns your soul and you are not afraid to look beyond your skills",
     },
     {
+      id: 3,
       img: Teamplayer,
       title: "Teamplayer",
       text: "You believe that you can go solo, but successes are real only when shared with your team",
     },
     {
+      id: 4,
       img: Empathetic,
       title: "Empathetic",
       text: "You believe that emotions are what makes us humans and being in other’s shoes sometimes can make you change perspective.",

@@ -2,8 +2,14 @@ import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 import { useState, useRef } from "react";
 
+var carouselInterval;
+var carouselIntervalTime = 2000;
+
 export default function Carousel(props) {
   const [activeCards, setActiveCards] = useState([]);
+  const carousel = useRef();
+  let onlyOnce = false;
+  let memoryActiveCards = [props.cards[0], props.cards[1], props.cards[2]];
 
   const calcBackwardsIndex = (i) => {
     if (i == 0) return props.cards.length - 1;
@@ -11,35 +17,49 @@ export default function Carousel(props) {
   };
 
   const calcForwardIndex = (i) => {
-    return (i + 1) % (props.cards.length - 1);
+    return (i + 1) % props.cards.length;
   };
 
-  const changeCards = (idx) => {
-    console.log("pressed: ", activeCards[1].id, idx);
-    if (1 < idx) {
+  const changeCards = (i) => {
+    if (i == 1) return;
+
+    let tempArray;
+    if (i == 2) {
       //forward
-      let tempArray = [...activeCards];
+      tempArray =
+        activeCards.length == 0 ? [...memoryActiveCards] : [...activeCards];
+      // console.log("[forwards] before: ", tempArray);
 
       tempArray.shift();
+      console.log(tempArray[1]);
       tempArray.push(props.cards[calcForwardIndex(tempArray[1].id)]);
-
-      setActiveCards(tempArray);
-      return;
-    }
-    if (1 > idx) {
+      // console.log("[forwards] after: ", tempArray);
+    } else {
       //backward
-      let tempArray = [, ...activeCards];
+
+      tempArray =
+        activeCards.length == 0 ? [, ...memoryActiveCards] : [, ...activeCards];
+      // console.log("[backward] before: ", tempArray);
+
       tempArray.pop();
       tempArray[0] = props.cards[calcBackwardsIndex(tempArray[1].id)];
-      console.log(tempArray);
-      setActiveCards(tempArray);
-      return;
+
+      // console.log("[backward] after: ", tempArray);
     }
+    setActiveCards(tempArray);
+
+    return;
   };
 
   useEffect(() => {
     setActiveCards([props.cards[0], props.cards[1], props.cards[2]]);
-    console.log("active cards:", activeCards);
+
+    carousel.current.addEventListener("mouseenter", () => {
+      if (!onlyOnce) {
+        changeCards(2);
+        onlyOnce = true;
+      }
+    });
   }, []);
 
   return (
@@ -48,6 +68,7 @@ export default function Carousel(props) {
         direction="row"
         justifyContent="center"
         className="strength-carousel"
+        ref={carousel}
       >
         {activeCards.map((c, i) => (
           <Card
@@ -61,33 +82,6 @@ export default function Carousel(props) {
             }}
           ></Card>
         ))}
-        {/* <Stack
-          className="strength-card"
-          gap="1rem"
-          ref={prevRef}
-          onClick={goBackwards}
-        >
-          <img src={prevCard().img} alt="brave" />
-          <h6>{prevCard().title}</h6>
-          <p>{prevCard().text}</p>
-        </Stack>
-
-        <Stack className="strength-card" gap="1rem" ref={currentRef}>
-          <img src={currentCard().img} alt="brave" />
-          <h6>{currentCard().title}</h6>
-          <p>{currentCard().text}</p>
-        </Stack>
-
-        <Stack
-          className="strength-card"
-          gap="1rem"
-          ref={nextRef}
-          onClick={goForward}
-        >
-          <img src={nextCard().img} alt="brave" />
-          <h6>{nextCard().title}</h6>
-          <p>{nextCard().text}</p>
-        </Stack> */}
       </Stack>
     </>
   );

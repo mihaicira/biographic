@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 import { useState, useRef } from "react";
 
-var carouselInterval;
-var carouselIntervalTime = 2000;
-
 export default function Carousel(props) {
   const [activeCards, setActiveCards] = useState([]);
   const carousel = useRef();
@@ -29,7 +26,6 @@ export default function Carousel(props) {
       tempArray =
         activeCards.length == 0 ? [...memoryActiveCards] : [...activeCards];
       // console.log("[forwards] before: ", tempArray);
-
       tempArray.shift();
       console.log(tempArray[1]);
       tempArray.push(props.cards[calcForwardIndex(tempArray[1].id)]);
@@ -40,10 +36,8 @@ export default function Carousel(props) {
       tempArray =
         activeCards.length == 0 ? [, ...memoryActiveCards] : [, ...activeCards];
       // console.log("[backward] before: ", tempArray);
-
       tempArray.pop();
       tempArray[0] = props.cards[calcBackwardsIndex(tempArray[1].id)];
-
       // console.log("[backward] after: ", tempArray);
     }
     setActiveCards(tempArray);

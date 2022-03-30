@@ -45,7 +45,9 @@ h2 {
 }
 h3 {
   font-size: 3rem;
-  color: white;
+  color: black;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: white;
 }
 h4 {
   font-size: 2rem;

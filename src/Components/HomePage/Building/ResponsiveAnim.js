@@ -51,7 +51,7 @@ function ResponsiveAnim() {
         <line
           id="phoneLineBtm"
           y1="213"
-          x2="123"
+          x2="125"
           y2="213"
           stroke="white"
           stroke-width="2"

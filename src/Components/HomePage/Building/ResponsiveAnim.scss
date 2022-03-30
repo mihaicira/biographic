@@ -4,6 +4,7 @@
   animation: animTransition $responsiveAnimDuration ease-in-out infinite;
 
   &:hover {
+    animation-play-state: paused;
     #sides,
     #tabletLineBtm,
     #phoneLineBtm,

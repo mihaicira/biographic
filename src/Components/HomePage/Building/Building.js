@@ -1,6 +1,8 @@
 import React from "react";
 import "./Building.scss";
 import ResponsiveAnim from "./ResponsiveAnim";
+import ServerlessAnim from "./ServerlessAnim";
+import TraditionalAnim from "./TraditionalAnim";
 
 function Building() {
   return (
@@ -18,7 +20,7 @@ function Building() {
       </div>
 
       <div className="building-container">
-        <h2>svg</h2>
+        <ServerlessAnim />
 
         <div>
           <h3>serverless</h3>
@@ -29,7 +31,7 @@ function Building() {
         <div>
           <h3>traditional</h3>
         </div>
-        <h2>svg</h2>
+        <TraditionalAnim />
       </div>
     </div>
   );

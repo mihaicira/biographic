@@ -19,7 +19,7 @@ function ResponsiveAnim() {
           height="236"
           rx="9"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="phineLineTop"
@@ -28,7 +28,7 @@ function ResponsiveAnim() {
           x2="125"
           y2="21"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="tabletLineTop"
@@ -37,7 +37,7 @@ function ResponsiveAnim() {
           x2="303"
           y2="21"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="desktopLineTop"
@@ -46,7 +46,7 @@ function ResponsiveAnim() {
           x2="489"
           y2="21"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="phoneLineBtm"
@@ -54,7 +54,7 @@ function ResponsiveAnim() {
           x2="125"
           y2="213"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="tabletLineBtm"
@@ -63,7 +63,7 @@ function ResponsiveAnim() {
           x2="303"
           y2="213"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <g id="mountain1">
           <path d="M225.5 75L269.234 196.5H181.766L225.5 75Z" fill="#FFFCFC" />
@@ -91,7 +91,7 @@ function ResponsiveAnim() {
           cy="225.5"
           r="6.5"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           id="foobar"
@@ -102,12 +102,12 @@ function ResponsiveAnim() {
           <path
             d="M467 7.5L471.5 11.5M476 15.5L471.5 11.5M471.5 11.5L476 7.5L467 15.5"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             d="M467 7.5L471.5 11.5M476 15.5L471.5 11.5M471.5 11.5L476 7.5L467 15.5"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </g>
       </g>

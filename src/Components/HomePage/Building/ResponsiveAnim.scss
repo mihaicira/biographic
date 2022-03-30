@@ -1,5 +1,8 @@
 #responsive-anim {
   $responsiveAnimDuration: 15s;
+
+  animation: animTransition $responsiveAnimDuration ease-in-out infinite;
+
   &:hover {
     #sides,
     #tabletLineBtm,
@@ -59,6 +62,25 @@
 
   #iphBtn {
     animation: iphBtnAnim $responsiveAnimDuration ease-in-out infinite;
+  }
+}
+
+@keyframes animTransition {
+  0%,
+  20%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  45%,
+  75%,
+  95% {
+    transform: translateX(20%);
+  }
+
+  50%,
+  70% {
+    transform: translateX(37%);
   }
 }
 

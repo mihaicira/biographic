@@ -63,14 +63,7 @@ function About() {
         direction="column"
         gap="5rem"
       >
-        {/* <AnimationOnScroll
-          animateIn="animate__fadeOutDown"
-          offset={50}
-          duration={2}
-          delay={1}
-        > */}
         <h5>who am I</h5>
-        {/* </AnimationOnScroll> */}
 
         <Stack
           alignItems="center"
@@ -112,23 +105,46 @@ function About() {
                 direction="row"
                 sx={{
                   width: "100%",
-                  outline: "2px solid green",
                   color: "white",
                 }}
               >
-                <button>
+                <button
+                  onClick={() => {
+                    window
+                      .open("https://www.linkedin.com/in/mihaicira/", "_blank")
+                      .focus();
+                  }}
+                >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </button>
 
-                <button>
+                <button
+                  onClick={() => {
+                    window
+                      .open("https://www.facebook.com/mihai.cira.7", "_blank")
+                      .focus();
+                  }}
+                >
                   <FontAwesomeIcon icon={faFacebook} />
                 </button>
 
-                <button>
+                <button
+                  onClick={() => {
+                    window
+                      .open("https://twitter.com/mihai291291", "_blank")
+                      .focus();
+                  }}
+                >
                   <FontAwesomeIcon icon={faTwitter} />
                 </button>
 
-                <button>
+                <button
+                  onClick={() => {
+                    window
+                      .open("https://github.com/mihaicira", "_blank")
+                      .focus();
+                  }}
+                >
                   <FontAwesomeIcon icon={faGithub} />
                 </button>
               </Stack>

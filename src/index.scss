@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 html,
 body,
 #root,
@@ -52,6 +56,12 @@ h3 {
 h4 {
   font-size: 2rem;
   color: white;
+}
+h5{
+  font-size: 2rem;
+  color: black;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: white;
 }
 h6 {
   font-size: 1rem;

@@ -3,23 +3,24 @@
 
   animation: animTransition $responsiveAnimDuration ease-in-out infinite;
 
-  &:hover {
-    animation-play-state: paused;
-    #sides,
-    #tabletLineBtm,
-    #phoneLineBtm,
-    #desktopLineTop,
-    #tabletLineTop,
-    #phoneLineTop,
-    #mountain1,
-    #mountain2,
-    #sun,
-    #xBtn,
-    #iphBtn {
-      animation-play-state: paused;
-      cursor: wait;
-    }
-  }
+  // &:hover {
+  //   animation-play-state: paused;
+  //   #sides,
+  //   #tabletLineBtm,
+  //   #phoneLineBtm,
+  //   #desktopLineTop,
+  //   #tabletLineTop,
+  //   #phoneLineTop,
+  //   #mountain1,
+  //   #mountain2,
+  //   #sun,
+  //   #xBtn,
+  //   #iphBtn {
+  //     animation-play-state: paused;
+  //     cursor: wait;
+  //   }
+  // }
+  
   #sides {
     transform: rotateY(0deg);
     animation: sidesAnim $responsiveAnimDuration ease-in-out infinite;

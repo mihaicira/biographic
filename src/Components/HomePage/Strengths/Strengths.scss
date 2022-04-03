@@ -3,15 +3,23 @@
 #strength-section {
   width: 100%;
   background: $--color-blue800;
-  padding-bottom: 10 rem;
+  padding-bottom: 13rem;
   min-height: 40vh;
-}
 
-#strength-divider {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  transform: translateY(-98%);
+  h4{
+    font-size: 2.5rem;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+  }
+
+  #strengths-divider{
+    position: absolute;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .strength-carousel {
@@ -19,6 +27,8 @@
   width: 15rem;
   max-width: 100%;
   height: 40vh;
+
+  padding-top: 5rem;
 
   margin: auto;
   @media (max-width: 650px) {

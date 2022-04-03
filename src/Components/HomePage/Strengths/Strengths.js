@@ -1,11 +1,11 @@
 import "./Strengths.scss";
-import Divider from "../../../assets/svg/strengths-waves.svg";
+import Divider from "../../../assets/svg/strengths-divider.svg";
 import Brave from "../../../assets/img/brave.png";
 import Frank from "../../../assets/img/frank.png";
 import Passionate from "../../../assets/img/passionate.png";
 import Teamplayer from "../../../assets/img/teamplayer.png";
 import Empathetic from "../../../assets/img/empathetic.png";
-import { Typography } from "@mui/material";
+import { Typography, Stack } from "@mui/material";
 import Carousel from "./Carousel";
 
 function Strengths() {
@@ -45,13 +45,26 @@ function Strengths() {
   return (
     <>
       <div className="section" id="strength-section">
-        <img src={Divider} id="strength-divider" />
-        <Typography
-          variant="h4"
-          sx={{ marginBottom: "5rem", textAlign: "right", marginRight: "5rem" }}
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          sx={{ backgroundColor: "white", outline: "1px solid green" }}
         >
-          STRENGTHS
-        </Typography>
+          <Typography
+            variant="h4"
+            sx={{
+              marginBottom: "0",
+              p: "2rem 0 2rem 0",
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            STRENGTHS
+          </Typography>
+        </Stack>
+        <Stack>
+          <img src={Divider} id="strengths-divider" />
+        </Stack>
 
         <Carousel cards={cards} />
       </div>

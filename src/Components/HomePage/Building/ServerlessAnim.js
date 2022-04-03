@@ -20,7 +20,7 @@ function ServerlessAnim() {
             height="81"
             rx="2"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <line
             id="Line 5"
@@ -55,7 +55,7 @@ function ServerlessAnim() {
             height="67"
             rx="4"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <line
             id="Line 4"
@@ -64,7 +64,7 @@ function ServerlessAnim() {
             x2="36"
             y2="238"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <circle id="Ellipse 4" cx="18" cy="244" r="2.5" stroke="white" />
         </g>
@@ -76,7 +76,7 @@ function ServerlessAnim() {
             width="165"
             height="127"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle 8"
@@ -93,13 +93,13 @@ function ServerlessAnim() {
             width="21"
             height="20"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Polygon 3"
             d="M383.749 209L464.5 141.305L545.251 209H383.749Z"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <g id="Line 6">
             <line x1="411.5" y1="236" x2="411.5" y2="257" stroke="white" />
@@ -118,7 +118,7 @@ function ServerlessAnim() {
             width="21"
             height="20"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <rect
             id="Rectangle 11"
@@ -127,7 +127,7 @@ function ServerlessAnim() {
             width="21"
             height="41"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <g id="Line 8">
             <line x1="504.5" y1="236" x2="504.5" y2="257" stroke="white" />
@@ -145,7 +145,7 @@ function ServerlessAnim() {
           id="Cloud"
           d="M164.639 48.3148L165.791 48.1465L166.213 47.0619C168.512 41.1621 172.679 35.6363 178.398 31.2091L177.174 29.6276L178.398 31.2091C187.499 24.1639 200.397 20 213.433 20C226.469 20 239.367 24.1639 248.468 31.2091L248.468 31.2091C250.675 32.9181 252.65 34.7958 254.382 36.7963L255.104 37.6308L256.195 37.4645C258.585 37.1002 261.014 36.9073 263.443 36.9073C273.496 36.9073 283.428 40.1199 290.419 45.5321C296.476 50.2206 300.236 56.4872 301.119 62.8738L301.357 64.593L303.092 64.5998C307.649 64.6177 312.111 66.082 315.214 68.4848L316.439 66.9034L315.214 68.4849C318.326 70.8941 320 74.1687 320 77.298C320 80.4277 318.326 83.7043 315.214 86.1133C312.091 88.5313 307.593 90 303.009 90H169.753C162.352 90 155.055 87.633 149.938 83.6725C144.834 79.721 142 74.2773 142 68.9669C142 63.6568 144.834 58.2149 149.938 54.2633C153.855 51.2317 159.062 49.1299 164.639 48.3148Z"
           stroke="white"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <circle id="sun" cx="338.5" cy="20.5" r="20.5" fill="white" />
       </g>

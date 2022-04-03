@@ -150,7 +150,43 @@ function ServerlessAnim() {
         />
         <g id="lines">
           <line
-            id="phoneline"
+            id="phoneline1"
+            x1="171"
+            y1="133"
+            x2="171"
+            y2="141"
+            stroke="white"
+            strokeWidth="2"
+          />
+          <line
+            id="phoneline4"
+            x1="171"
+            y1="133"
+            x2="171"
+            y2="141"
+            stroke="white"
+            strokeWidth="2"
+          />
+          <line
+            id="phoneline3"
+            x1="171"
+            y1="133"
+            x2="171"
+            y2="141"
+            stroke="white"
+            strokeWidth="2"
+          />
+          <line
+            id="phoneline2"
+            x1="171"
+            y1="133"
+            x2="171"
+            y2="141"
+            stroke="white"
+            strokeWidth="2"
+          />
+          <line
+            id="phoneline5"
             x1="171"
             y1="133"
             x2="171"

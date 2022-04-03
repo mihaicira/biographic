@@ -2,13 +2,33 @@
     outline: 2px solid red;
 
 
-    #phoneline{
+    #phoneline1{
         animation: 3s phoneline linear infinite;
         transform-box: fill-box;
     }
 
+    #phoneline2{
+        animation: 3s phoneline 150ms linear infinite;
+        transform-box: fill-box;
+    }
+
+    #phoneline3{
+        animation: 3s phoneline 300ms linear infinite;
+        transform-box: fill-box;
+    }
+
+    #phoneline4{
+        animation: 3s phoneline 450ms linear infinite;
+        transform-box: fill-box;
+    }
+
+    #phoneline5{
+        animation: 3s phoneline 600ms linear infinite;
+        transform-box: fill-box;
+    }
+
     #desktopline{
-        animation: 3s desktopline linear infinite;
+        animation: 3s desktopline 750ms linear infinite;
         transform-box: fill-box;
     }
 

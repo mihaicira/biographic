@@ -50,6 +50,8 @@ function Strengths() {
   }, []);
 
   const scrollEvent = () => {
+    if (window.innerWidth < 750) return;
+
     const Y = window.scrollY;
 
     let transitionValue = Y / 50 + 15;

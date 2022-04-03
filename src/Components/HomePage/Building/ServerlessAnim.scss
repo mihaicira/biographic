@@ -1,0 +1,67 @@
+#serverless-anim{
+    outline: 2px solid red;
+
+
+    #phoneline{
+        animation: 3s phoneline linear infinite;
+        transform-box: fill-box;
+    }
+
+    #desktopline{
+        animation: 3s desktopline linear infinite;
+        transform-box: fill-box;
+    }
+
+}
+
+@keyframes desktopline{
+    0%{
+        transform: translateY(-60px) translateX(0) rotateZ(0deg);
+    }
+
+    46.68%{
+        transform: translateY(0px) translateX(0) rotateZ(0deg);
+    }
+
+    49.92%{
+        transform: translateY(0px) translateX(0) rotateZ(90deg);
+    }
+
+    69.12%{
+        transform: translateY(0px) translateX(-50px) rotateZ(90deg);
+    }
+
+    72.96%{
+        transform: translateY(0px) translateX(-50px) rotateZ(0deg);
+    }
+
+    100%{
+        transform: translateY(60px) translateX(-50px) rotateZ(0deg);
+    }
+}
+
+@keyframes phoneline{
+    0%{
+        transform: translateY(-60px) translateX(0) rotateZ(0deg);
+    }
+
+    24.99%{
+        transform: translateY(0px) translateX(0) rotateZ(0deg);
+    }
+
+    28.56%{
+        transform: translateY(0px) translateX(0) rotateZ(90deg);
+    }
+
+    85.68%{
+        transform: translateY(0px) translateX(-150px) rotateZ(90deg);
+    }
+
+    89.25%{
+        transform: translateY(0px) translateX(-150px) rotateZ(0deg);
+    }
+
+    100%{
+        transform: translateY(40px) translateX(-150px) rotateZ(0deg);
+    }
+}

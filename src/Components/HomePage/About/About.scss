@@ -8,26 +8,64 @@
     // height: 40cm;
     position: relative;
 
-    #meText,#mePic,h5{
-      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-      $seconds: 1s;
-      transition: $seconds;
-      -o-transition: $seconds;
-      -moz-transition: $seconds;
-      -webkit-transition: $seconds;
-    }
+   
+    button{
+      background: transparent;
+      outline: none;
+      border: none;
 
+      transition: 500ms;
+      -o-transition: 500ms;
+      -moz-transition: 500ms;
+      -webkit-transition: 500ms;
+
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(.8);
+        opacity: .5;
+      }
+
+      *{
+        height: 3rem;
+        width: 3rem;
+        color: white;
+      }
+    }
     
     #meText{
         max-width: 23rem;
         text-align: center;
         opacity: 1;
+        @media (max-width: 750px) {
+          max-width: 20rem;
+        }
+    }
+
+    .about{
+      &>div:nth-child(1){
+        order: 2;
+      }
+
+      &>div:nth-child(2){
+        order: 3;
+        @media (max-width: 750px) {
+          max-width: 20rem;
+          order: 1;
+        }
+      }
     }
     
     #mePic{
         // BIG PIC
         width: 20rem;
         opacity: 1;
+        outline: 1px solid red;
+        @media (max-width: 750px) {
+          max-width: 20rem;
+          flex-shrink: 1;
+        }
+        
     }
     
     .aboutMeCardsContainer{

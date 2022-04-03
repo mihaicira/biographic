@@ -4,6 +4,14 @@ import Divider from "../../../assets/svg/strengths-waves.svg";
 import { Stack, Typography } from "@mui/material";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faFacebook,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+
 function About() {
   const meText = useRef();
   const mePic = useRef();
@@ -16,6 +24,8 @@ function About() {
   }, []);
 
   const scrollEvent = () => {
+    if (window.innerWidth < 750) return;
+
     const Y = window.scrollY;
 
     let transitionValue = Y / 40;
@@ -91,11 +101,38 @@ function About() {
           </AnimationOnScroll>
 
           <AnimationOnScroll animateIn="animate__fadeInRight">
-            <img
-              ref={mePic}
-              id="mePic"
-              src="https://scontent.ftsr1-2.fna.fbcdn.net/v/t39.30808-1/245582200_1714124032127017_8508514677075839217_n.jpg?stp=c0.292.1429.1429a_dst-jpg_s160x160&_nc_cat=105&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeEN_-GqjAOxi36uRoDWpqmrXJz5qccx2B1cnPmpxzHYHVD6sbYog9MQ2vbBPyj2K_P2r3-cFhvmFLIBSkd2FoXe&_nc_ohc=WMFwoVdXu3sAX_yoBXd&_nc_ht=scontent.ftsr1-2.fna&oh=00_AT_m8Hsdbmi9HuuUKxmABIvVi4Y64VME-HATMOwZjJkeBg&oe=624A39A4"
-            />
+            <Stack ref={mePic} gap="1rem" id="mePicContainer">
+              <img
+                id="mePic"
+                src="https://scontent.ftsr1-2.fna.fbcdn.net/v/t39.30808-1/245582200_1714124032127017_8508514677075839217_n.jpg?stp=c0.292.1429.1429a_dst-jpg_s160x160&_nc_cat=105&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeEN_-GqjAOxi36uRoDWpqmrXJz5qccx2B1cnPmpxzHYHVD6sbYog9MQ2vbBPyj2K_P2r3-cFhvmFLIBSkd2FoXe&_nc_ohc=WMFwoVdXu3sAX_yoBXd&_nc_ht=scontent.ftsr1-2.fna&oh=00_AT_m8Hsdbmi9HuuUKxmABIvVi4Y64VME-HATMOwZjJkeBg&oe=624A39A4"
+              />
+              <Stack
+                alignItems="center"
+                justifyContent="space-evenly"
+                direction="row"
+                sx={{
+                  width: "100%",
+                  outline: "2px solid green",
+                  color: "white",
+                }}
+              >
+                <button>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </button>
+
+                <button>
+                  <FontAwesomeIcon icon={faFacebook} />
+                </button>
+
+                <button>
+                  <FontAwesomeIcon icon={faTwitter} />
+                </button>
+
+                <button>
+                  <FontAwesomeIcon icon={faGithub} />
+                </button>
+              </Stack>
+            </Stack>
           </AnimationOnScroll>
         </Stack>
 

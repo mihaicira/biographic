@@ -7,6 +7,7 @@ import Teamplayer from "../../../assets/img/teamplayer.png";
 import Empathetic from "../../../assets/img/empathetic.png";
 import { Typography, Stack } from "@mui/material";
 import Carousel from "./Carousel";
+import { useEffect, useRef } from "react";
 
 function Strengths() {
   const cards = [
@@ -42,6 +43,20 @@ function Strengths() {
     },
   ];
 
+  const strengths = useRef();
+
+  useEffect(() => {
+    document.addEventListener("scroll", scrollEvent);
+  }, []);
+
+  const scrollEvent = () => {
+    const Y = window.scrollY;
+
+    let transitionValue = Y / 50 + 15;
+
+    strengths.current.style.letterSpacing = `${transitionValue}px`;
+  };
+
   return (
     <>
       <div className="section" id="strength-section">
@@ -58,6 +73,7 @@ function Strengths() {
               width: "100%",
               textAlign: "center",
             }}
+            ref={strengths}
           >
             STRENGTHS
           </Typography>

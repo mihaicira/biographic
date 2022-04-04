@@ -1,0 +1,122 @@
+#traditional-anim{
+    $duration: 15s;
+    #wheel{
+        animation: 8s rotate linear infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+    }   
+
+    #line1{
+        opacity: 0;
+        animation: $duration line1 linear infinite;
+        transform-box: fill-box;
+        transform-origin: right;
+    }
+
+    #line2{
+        opacity: 0;
+        animation: $duration line2 linear infinite;
+        transform-box: fill-box;
+        transform-origin: right;
+    }
+
+    #line3{
+        opacity: 0;
+        animation: $duration line3 linear infinite;
+        transform-box: fill-box;
+        transform-origin: right;
+    }
+
+    #line4{
+        opacity: 0;
+        animation: $duration line4 linear infinite;
+        transform-box: fill-box;
+        transform-origin: right;
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+@keyframes line1{
+
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(170px);
+        opacity: 1;
+    }
+    22%,100%{
+        transform: translateX(170px);
+        opacity: 0;
+    }
+}
+
+@keyframes line2{
+    21%{
+    transform: translateX(0) rotateY(40deg);
+    opacity: 0;
+    }
+
+  23%{
+    transform: translateX(0) rotateY(0);
+    opacity: 1;
+  }
+
+  36.66%{
+    transform: translateX(110px) rotateY(0);
+    opacity: 1;
+  }
+
+  38.66%,100%{
+    transform: translateX(110px) rotateY(40deg);
+    opacity: 0;
+  }
+}
+
+@keyframes line3{
+    37.66%{
+        transform: translateX(0) rotateY(40deg);
+        opacity: 0;
+    }
+    39.66%{
+      transform: translateX(0) rotateY(0deg);
+      opacity: 1;
+    }
+    53.32%{
+      transform: translateX(-110px) rotateY(0deg);
+      opacity: 1;
+    }
+    55.32%,100%{
+    transform: translateX(-110px) rotateY(40deg);
+      opacity: 0;
+    }
+  }
+
+@keyframes line4{
+    54.32%{
+      transform: translateX(0) rotateY(40deg);
+      opacity: 0;
+    }
+    56.32%{
+      transform: translateX(0) rotateY(0deg);
+      opacity: 1;
+    }
+    69.98%{
+      transform: translateX(-110px) rotateY(0deg);
+      opacity: 1;
+    }
+    71.98%,100%{
+    transform: translateX(-110px) rotateY(40deg);
+      opacity: 0;
+    }
+  }

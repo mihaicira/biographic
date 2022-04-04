@@ -149,69 +149,33 @@ function ServerlessAnim() {
           strokeWidth="4"
         />
         <g id="lines">
-          <line
-            id="phoneline1"
-            x1="171"
-            y1="133"
-            x2="171"
-            y2="141"
-            stroke="white"
-            strokeWidth="2"
+          <circle
+            id="desktopline3"
+            cx="222.5"
+            cy="171.5"
+            r="1.5"
+            fill="white"
           />
-          <line
-            id="phoneline4"
-            x1="171"
-            y1="133"
-            x2="171"
-            y2="141"
-            stroke="white"
-            strokeWidth="2"
+          <circle
+            id="desktopline2"
+            cx="222.5"
+            cy="171.5"
+            r="1.5"
+            fill="white"
           />
-          <line
-            id="phoneline3"
-            x1="171"
-            y1="133"
-            x2="171"
-            y2="141"
-            stroke="white"
-            strokeWidth="2"
+          <circle
+            id="desktopline1"
+            cx="222.5"
+            cy="171.5"
+            r="1.5"
+            fill="white"
           />
-          <line
-            id="phoneline2"
-            x1="171"
-            y1="133"
-            x2="171"
-            y2="141"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <line
-            id="phoneline5"
-            x1="171"
-            y1="133"
-            x2="171"
-            y2="141"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <line
-            id="desktopline"
-            x1="221"
-            y1="165"
-            x2="221"
-            y2="173"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <line
-            id="houseline"
-            x1="295"
-            y1="109"
-            x2="295"
-            y2="117"
-            stroke="white"
-            strokeWidth="2"
-          />
+          <circle id="houseline3" cx="288.5" cy="115.5" r="1.5" fill="white" />
+          <circle id="houseline2" cx="288.5" cy="115.5" r="1.5" fill="white" />
+          <circle id="houseline1" cx="288.5" cy="115.5" r="1.5" fill="white" />
+          <circle id="phoneline1" cx="171.5" cy="139.5" r="1.5" fill="white" />
+          <circle id="phoneline2" cx="171.5" cy="139.5" r="1.5" fill="white" />
+          <circle id="phoneline3" cx="171.5" cy="139.5" r="1.5" fill="white" />
         </g>
       </g>
     </svg>

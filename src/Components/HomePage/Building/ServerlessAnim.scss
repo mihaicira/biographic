@@ -1,87 +1,145 @@
 #serverless-anim{
-    outline: 2px solid red;
 
 
     #phoneline1{
-        animation: 3s phoneline linear infinite;
+        opacity: 0;
+        animation: 3.4s phoneline linear infinite;
         transform-box: fill-box;
     }
 
     #phoneline2{
-        animation: 3s phoneline 150ms linear infinite;
+        opacity: 0;
+        animation: 3.4s phoneline 150ms linear infinite;
         transform-box: fill-box;
     }
 
     #phoneline3{
-        animation: 3s phoneline 300ms linear infinite;
+        opacity: 0;
+        animation: 3.4s phoneline 300ms linear infinite;
         transform-box: fill-box;
     }
 
-    #phoneline4{
-        animation: 3s phoneline 450ms linear infinite;
+    #desktopline1{
+        opacity: 0;
+        animation: 3s desktopline linear infinite;
         transform-box: fill-box;
     }
 
-    #phoneline5{
-        animation: 3s phoneline 600ms linear infinite;
+    #desktopline2{
+        opacity: 0;
+        animation: 3s desktopline 150ms linear infinite;
         transform-box: fill-box;
     }
 
-    #desktopline{
-        animation: 3s desktopline 750ms linear infinite;
+    #desktopline3{
+        opacity: 0;
+        animation: 3s desktopline 300ms linear infinite;
+        transform-box: fill-box;
+    }
+
+
+    #houseline1{
+        opacity: 0;
+        animation: 3.8s houseline linear infinite;
+        transform-box: fill-box;
+    }
+
+    #houseline2{
+        opacity: 0;
+        animation: 3.8s houseline 150ms linear infinite;
+        transform-box: fill-box;
+    }
+
+    #houseline3{
+        opacity: 0;
+        animation: 3.8s houseline 300ms linear infinite;
         transform-box: fill-box;
     }
 
 }
 
-@keyframes desktopline{
+@keyframes houseline{
     0%{
-        transform: translateY(-60px) translateX(0) rotateZ(0deg);
+        opacity: 1;
+        transform: translateX(0px) translateY(-40px);
     }
 
-    46.68%{
-        transform: translateY(0px) translateX(0) rotateZ(0deg);
-    }
-
-    49.92%{
-        transform: translateY(0px) translateX(0) rotateZ(90deg);
+    19.2%{
+        opacity: 1;
+        transform: translateX(0) translateY(0);
     }
 
     69.12%{
-        transform: translateY(0px) translateX(-50px) rotateZ(90deg);
-    }
-
-    72.96%{
-        transform: translateY(0px) translateX(-50px) rotateZ(0deg);
+        opacity: 1;
+        transform: translateX(120px) translateY(0px);
     }
 
     100%{
-        transform: translateY(60px) translateX(-50px) rotateZ(0deg);
+        opacity: 1;
+        transform: translateX(120px) translateY(70px);
+    }
+}
+
+@keyframes desktopline{
+    0%{
+        opacity: 1;
+        transform: translateY(-100px) translateX(0);
+    }
+
+    46.68%{
+        opacity: 1;
+        transform: translateY(0px) translateX(0);
+    }
+
+    // 49.92%{
+    //     opacity: 1;
+    //     transform: translateY(0px) translateX(0);
+    // }
+
+    69.12%{
+        opacity: 1;
+        transform: translateY(0px) translateX(-50px);
+    }
+
+    // 72.96%{
+    //     opacity: 1;
+    //     transform: translateY(0px) translateX(-50px);
+    // }
+
+    100%{
+        opacity: 1;
+        transform: translateY(60px) translateX(-50px);
     }
 }
 
 @keyframes phoneline{
     0%{
-        transform: translateY(-60px) translateX(0) rotateZ(0deg);
+        opacity: 1;
+        transform: translateY(-60px) translateX(0);
     }
 
     24.99%{
-        transform: translateY(0px) translateX(0) rotateZ(0deg);
+        opacity: 1;
+        transform: translateY(0px) translateX(0);
     }
 
-    28.56%{
-        transform: translateY(0px) translateX(0) rotateZ(90deg);
-    }
+    // 28.56%{
+    //     opacity: 1;
+    //     transform: translateY(0px) translateX(0);
+    // }
 
     85.68%{
-        transform: translateY(0px) translateX(-150px) rotateZ(90deg);
+        opacity: 1;
+        transform: translateY(0px) translateX(-150px);
     }
 
-    89.25%{
-        transform: translateY(0px) translateX(-150px) rotateZ(0deg);
-    }
+    // 89.25%{
+    //     opacity: 1;
+    //     transform: translateY(0px) translateX(-150px);
+    // }
 
     100%{
-        transform: translateY(40px) translateX(-150px) rotateZ(0deg);
+        opacity: 1;
+        transform: translateY(40px) translateX(-150px);
     }
 }

@@ -1,5 +1,8 @@
 #serverless-anim{
-
+    @media (max-width: 750px) {
+        transform-origin: center;
+        transform: scale(.7);
+    }
 
     #phoneline1{
         opacity: 0;
@@ -83,7 +86,7 @@
 @keyframes desktopline{
     0%{
         opacity: 1;
-        transform: translateY(-100px) translateX(0);
+        transform: translateY(-95px) translateX(0);
     }
 
     46.68%{

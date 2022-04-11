@@ -1,4 +1,10 @@
 #traditional-anim{
+    @media (max-width: 750px) {
+        transform-origin: center;
+        transform: scale(.7);
+    }
+
+
     $duration: 15s;
     #wheel{
         animation: 8s rotate linear infinite;

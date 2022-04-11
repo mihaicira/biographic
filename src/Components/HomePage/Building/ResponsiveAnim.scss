@@ -1,4 +1,9 @@
 #responsive-anim {
+  @media (max-width: 750px) {
+    transform-origin: center;
+    transform: scale(.2);
+  }
+
   $responsiveAnimDuration: 15s;
 
   animation: animTransition $responsiveAnimDuration ease-in-out infinite;

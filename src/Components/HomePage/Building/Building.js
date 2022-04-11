@@ -10,6 +10,10 @@ function Building() {
   const building = useRef();
   const mentaining = useRef();
 
+  const responsive = useRef();
+  const serverless = useRef();
+  const traditional = useRef();
+
   useEffect(() => {
     document.addEventListener("scroll", scrollEvent);
   }, []);
@@ -24,9 +28,14 @@ function Building() {
     building.current.style.transform = `translateY(-${transformValue}%) translateX(${
       transformValue / 2
     }%)`;
+
     mentaining.current.style.transform = `translateY(${transformValue}%) translateX(-${
       transformValue / 2
     }%)`;
+
+    // responsive.current.firstChild.style.transform = `scale()`
+
+    console.log(Y);
   };
 
   return (
@@ -43,23 +52,39 @@ function Building() {
       </Stack>
 
       <div className="building-container">
-        <div>
-          <h3>responsive</h3>
+        <div ref={responsive}>
+          <h3>
+            {Array.from("responsive").map((char, i) => (
+              <span key={`responsive-char-${i}`}>{char}</span>
+            ))}
+          </h3>
+
+          <p>web aplications</p>
         </div>
         <ResponsiveAnim />
       </div>
 
-      <div className="building-container">
+      <div className="building-container" id="serverless-building-container">
         <ServerlessAnim />
 
-        <div>
-          <h3>serverless</h3>
+        <div ref={serverless}>
+          <h3>
+            {Array.from("serverless").map((char, i) => (
+              <span key={`serverless-char-${i}`}>{char}</span>
+            ))}
+          </h3>
+          <p>web aplications</p>
         </div>
       </div>
 
       <div className="building-container">
-        <div>
-          <h3>traditional</h3>
+        <div ref={traditional}>
+          <h3>
+            {Array.from("traditional").map((char, i) => (
+              <span key={`traditional-char-${i}`}>{char}</span>
+            ))}
+          </h3>
+          <p>web aplications</p>
         </div>
         <TraditionalAnim />
       </div>

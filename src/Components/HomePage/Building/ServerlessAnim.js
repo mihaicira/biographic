@@ -68,7 +68,7 @@ function ServerlessAnim() {
           />
           <circle id="Ellipse 4" cx="18" cy="243" r="2.5" stroke="white" />
         </g>
-        <g id="house" clip-path="url(#clip0_44_23)">
+        <g id="house" clipPath="url(#clip0_44_23)">
           <g id="layer2">
             <path
               id="path4555"
@@ -93,8 +93,8 @@ function ServerlessAnim() {
               d="M465.411 337.32H403.586V260.048C403.586 259.298 403.741 258.585 404.013 257.935C404.284 257.285 404.665 256.697 405.15 256.206C405.636 255.714 406.216 255.328 406.857 255.053C407.499 254.778 408.203 254.621 408.943 254.621H460.052C460.792 254.621 461.496 254.778 462.138 255.053C462.78 255.328 463.359 255.714 463.845 256.206C464.33 256.697 464.711 257.285 464.983 257.935C465.254 258.585 465.409 259.298 465.409 260.048V337.32H465.411Z"
               stroke="white"
               strokeWidth="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               id="path3431"

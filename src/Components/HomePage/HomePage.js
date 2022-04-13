@@ -2,6 +2,7 @@ import About from "./About/About";
 import Building from "./Building/Building";
 import HeroSection from "./HeroSection/HeroSection";
 import Strengths from "./Strengths/Strengths";
+import Tech from "./Tech/Tech";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,8 @@ export default function HomePage() {
       <Strengths />
 
       <Building />
+
+      <Tech/>
 
       <h2>helo</h2>
     </>

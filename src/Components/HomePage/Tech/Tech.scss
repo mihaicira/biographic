@@ -1,0 +1,46 @@
+@import '../../../variables';
+
+#tech-section {
+  color: red;
+  background: $--color-purple700;
+  padding-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 6rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 10rem;
+    width: 10rem;
+
+    border: 0.1rem solid white;
+    border-radius: 0.2rem;
+
+    overflow: hidden;
+
+    &:hover {
+      & > * {
+        transform: scale(1.4);
+      }
+    }
+
+    & > * {
+      background: linear-gradient(red, blue);
+
+      width: 100%;
+      height: auto;
+
+      transition: 500ms;
+      -o-transition: 500ms;
+      -moz-transition: 500ms;
+      -webkit-transition: 500ms;
+    }
+  }
+}

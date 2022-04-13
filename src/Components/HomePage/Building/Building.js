@@ -32,10 +32,6 @@ function Building() {
     mentaining.current.style.transform = `translateY(${transformValue}%) translateX(-${
       transformValue / 2
     }%)`;
-
-    // responsive.current.firstChild.style.transform = `scale()`
-
-    console.log(Y);
   };
 
   return (

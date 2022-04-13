@@ -1,0 +1,95 @@
+@import '../../../variables';
+
+#contact-section {
+  padding-bottom: 5rem;
+  h1 {
+    & + a {
+      text-decoration: none;
+      color: white;
+
+      transition: 500ms;
+      -o-transition: 500ms;
+      -moz-transition: 500ms;
+      -webkit-transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.5;
+      }
+    }
+
+    & + p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .form {
+    width: 40rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    & > * {
+      //   border-radius: 0.5rem;
+      padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+      //   color: red;
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      font-weight: bold;
+    }
+
+    & > *:not(button) {
+      transition: 500ms;
+      -o-transition: 500ms;
+      -moz-transition: 500ms;
+      -webkit-transition: 500ms;
+
+      &:focus {
+        outline: none;
+        -moz-box-shadow: inset 0 0 4px 1px white;
+        -webkit-box-shadow: inset 0 0 4px 1px white;
+        box-shadow: inset 0 0 4px 1px white;
+      }
+    }
+
+    textarea {
+      max-width: 100%;
+      min-width: 80%;
+      min-height: 5rem;
+      max-height: 10rem;
+    }
+
+    input {
+      width: 50%;
+    }
+
+    button {
+      cursor: pointer;
+      transition: 500ms;
+      -o-transition: 500ms;
+      -moz-transition: 500ms;
+      -webkit-transition: 500ms;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  .uglybtn {
+    button {
+      background-color: transparent;
+      outline: none;
+      border: none;
+
+      cursor: pointer;
+      transition: 500ms;
+      -o-transition: 500ms;
+      -moz-transition: 500ms;
+      -webkit-transition: 500ms;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

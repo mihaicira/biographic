@@ -1,9 +1,8 @@
 @import '../../../variables';
 
 #tech-section {
-  color: red;
   background: $--color-purple700;
-  padding-bottom: 2rem;
+  padding: 0 15rem 5.8rem 15rem;
 
   display: flex;
   align-items: center;
@@ -17,25 +16,25 @@
     align-items: center;
     justify-content: center;
 
-    height: 10rem;
+    height: 4rem;
     width: 10rem;
 
-    border: 0.1rem solid white;
+    // border: 0.1rem solid white;
     border-radius: 0.2rem;
 
-    overflow: hidden;
+    // overflow: hidden;
 
     &:hover {
       & > * {
-        transform: scale(1.4);
+        transform: scale(1.2);
+        filter: grayscale(0);
       }
     }
 
     & > * {
-      background: linear-gradient(red, blue);
-
       width: 100%;
       height: auto;
+      filter: grayscale(1);
 
       transition: 500ms;
       -o-transition: 500ms;

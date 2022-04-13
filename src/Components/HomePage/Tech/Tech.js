@@ -1,6 +1,15 @@
 import './Tech.scss'
-import React, {useRef,useEffect} from 'react'
+import {useRef,useEffect} from 'react'
 import {Stack} from "@mui/material";
+import ReactSvg from './ReactSvg/ReactSvg';
+import Firebase from "../../../assets/img/firebase.png";
+import Nodejs from "../../../assets/img/nodejs.png";
+import Postgresql from "../../../assets/img/postgresql.png";
+import Threejs from "../../../assets/img/threejs.png";
+import Phoenix from "../../../assets/img/phoenix.png";
+import Materialui from "../../../assets/img/materialui.png";
+import Jquery from "../../../assets/img/jquery.png";
+import Mongodb from "../../../assets/img/mongodb.png";
 
 export default function Tech() {
     const using = useRef()
@@ -22,57 +31,52 @@ export default function Tech() {
         transformValue = Y / 30;
     
         pic.current.style.transform = `translateX(${transformValue}%)`;
-    
-        // responsive.current.firstChild.style.transform = `scale()`
-    
-        console.log(Y);
       };
 
   return (
     <div className="section" id="tech-section">
         <Stack direction="column" alignItems="center" justifyContent="center">
             <h2 ref={using}>using...</h2>
-            <p ref={pic}>pic</p>
+            <div ref={pic}>
+                <ReactSvg/>
+            </div>
         </Stack>
 
-        <Stack direction="row" flexWrap="wrap" gap="2rem" alignItems="center" justifyContent="center">
+        <Stack direction="row" flexWrap="wrap" gap="4rem" alignItems="center" justifyContent="center">
 
             <a href="">
-                <p>lorem </p>
+                <img src={Firebase}/>
             </a>
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Nodejs}/>
             </a>
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Postgresql}/>
             </a>
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Mongodb}/>
             </a>
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Materialui}/>
             </a>
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Jquery}/>
             </a>
 
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Phoenix}/>
             </a>
 
             <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+                <img src={Threejs}/>
             </a>
 
-            <a href="">
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
-            </a>
 
         </Stack>
         

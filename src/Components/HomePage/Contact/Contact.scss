@@ -2,6 +2,16 @@
 
 #contact-section {
   padding-bottom: 5rem;
+
+  .alertBox {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 2rem;
+    margin: auto;
+    width: 400px;
+  }
+
   h1 {
     & + a {
       text-decoration: none;

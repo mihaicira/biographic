@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Stack } from "@mui/material";
-import { useState, useRef } from "react";
+import React, { useEffect } from 'react';
+import { Stack } from '@mui/material';
+import { useState, useRef } from 'react';
 
 export default function Carousel(props) {
   const [activeCards, setActiveCards] = useState([]);
@@ -27,7 +27,6 @@ export default function Carousel(props) {
         activeCards.length == 0 ? [...memoryActiveCards] : [...activeCards];
       // console.log("[forwards] before: ", tempArray);
       tempArray.shift();
-      console.log(tempArray[1]);
       tempArray.push(props.cards[calcForwardIndex(tempArray[1].id)]);
       // console.log("[forwards] after: ", tempArray);
     } else {
@@ -48,7 +47,7 @@ export default function Carousel(props) {
   useEffect(() => {
     setActiveCards([props.cards[0], props.cards[1], props.cards[2]]);
 
-    carousel.current.addEventListener("mouseenter", () => {
+    carousel.current.addEventListener('mouseenter', () => {
       if (!onlyOnce) {
         changeCards(2);
         onlyOnce = true;
@@ -70,7 +69,7 @@ export default function Carousel(props) {
             title={c.title}
             img={c.img}
             text={c.text}
-            className={i == 0 ? "leftCard" : i == 2 ? "rightCard" : null}
+            className={i == 0 ? 'leftCard' : i == 2 ? 'rightCard' : null}
             onClick={() => {
               changeCards(i);
             }}

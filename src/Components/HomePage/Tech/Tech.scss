@@ -3,6 +3,9 @@
 #tech-section {
   background: $--color-purple700;
   padding: 0 15rem 5.8rem 15rem;
+  @media (max-width: 900px) {
+    padding: 0 4rem 5.8rem 4rem;
+  }
 
   display: flex;
   align-items: center;
@@ -19,10 +22,7 @@
     height: 4rem;
     width: 10rem;
 
-    // border: 0.1rem solid white;
     border-radius: 0.2rem;
-
-    // overflow: hidden;
 
     &:hover {
       & > * {

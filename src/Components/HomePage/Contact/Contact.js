@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Contact.scss';
 import Divider from '../../../assets/svg/contact-divider.svg';
 import ThumbsUp from '../../../assets/svg/thumbs_up.svg';
@@ -10,43 +10,57 @@ import emailjs from 'emailjs-com';
 export default function Contact() {
   const from = useRef();
   const text = useRef();
-  const [alert, setAlert] = useState(false);
+  const [warningAlert, setWarningAlert] = useState(false);
+  const [successAlert, setSuccessAlert] = useState(false);
 
   const sendEmail = () => {
     const fromTxt = from.current.value;
     const textTxt = text.current.value;
 
     if (textTxt == '') {
-      setAlert(true);
+      setSuccessAlert(false);
+      setWarningAlert(true);
+      setTimeout(() => {
+        setWarningAlert(false);
+      }, 6000);
       return;
     }
-
-    console.log(textTxt);
-
-    return;
 
     const date = new Date();
     emailjs.send(
       'service_c0zrve8',
       'template_c6iu695',
       {
-        from: 'email',
-        text: 'message',
+        from: fromTxt,
+        text: textTxt,
         date: date.toString(),
       },
       'Mpm1e_o9P8YhwFyNt'
     );
-    console.log('email sent');
+
+    setWarningAlert(false);
+    setSuccessAlert(true);
+    setTimeout(() => {
+      setSuccessAlert(false);
+    }, 6000);
   };
 
   return (
     <div className="section" id="contact-section">
-      <img id="divider" src={Divider} />
+      <img id="dividerContact" src={Divider} />
 
-      {alert && (
+      {warningAlert && (
         <WarningAlert
           close={() => {
-            setAlert(false);
+            setWarningAlert(false);
+          }}
+        />
+      )}
+
+      {successAlert && (
+        <SuccessAlert
+          close={() => {
+            setSuccessAlert(false);
           }}
         />
       )}
@@ -55,10 +69,10 @@ export default function Contact() {
         alignItems="center"
         justifyContent="center"
         direction="column"
-        sx={{ marginBottom: '5rem' }}
+        sx={{ marginBottom: '5rem', marginTop: '5rem' }}
       >
         <h1>contact</h1>
-        <a href="">ciramihai291@gmail.com</a>
+        <a href="mailto:ciramihai291@gmail.com">ciramihai291@gmail.com</a>
       </Stack>
 
       <Stack
@@ -95,9 +109,36 @@ export default function Contact() {
 }
 
 function WarningAlert(props) {
+  const alert = useRef();
+  useEffect(() => {
+    alert.current.style.opacity = '1';
+  }, []);
+
   return (
-    <Alert severity="warning" className="alertBox" onClose={props.close}>
-      This is a warning alert — check it out!
+    <Alert
+      severity="warning"
+      className="alertBox"
+      onClose={props.close}
+      ref={alert}
+    >
+      Type something in the message text box.
+    </Alert>
+  );
+}
+
+function SuccessAlert(props) {
+  const alert = useRef();
+  useEffect(() => {
+    alert.current.style.opacity = '1';
+  }, []);
+  return (
+    <Alert
+      severity="success"
+      className="alertBox"
+      onClose={props.close}
+      ref={alert}
+    >
+      The message has been sent. Thank you!
     </Alert>
   );
 }

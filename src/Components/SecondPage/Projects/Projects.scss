@@ -1,0 +1,46 @@
+.projects {
+  margin-top: 100vh;
+  & > div:nth-of-type(1) {
+    p {
+      color: #4f4545;
+    }
+    h2 {
+      font-size: 6rem;
+    }
+  }
+
+  .project {
+    font-family: 'Rokkitt', serif;
+    z-index: 200;
+    & > div:nth-of-type(1) {
+      h4 {
+        @media (max-width: 650px) {
+          max-width: none;
+          padding: 0 2rem 0 2rem;
+        }
+      }
+      h6 {
+        color: #23d4df;
+        @media (max-width: 650px) {
+          max-width: none;
+          padding: 0 2rem 0 2rem;
+        }
+      }
+      p {
+        max-width: 40vw;
+        @media (max-width: 650px) {
+          max-width: none;
+          padding: 0 2rem 0 2rem;
+        }
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      text-align: center;
+      & > h6:nth-of-type(1) {
+        color: #23d4df;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

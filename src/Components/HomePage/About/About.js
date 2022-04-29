@@ -1,26 +1,26 @@
-import React, { useEffect, useRef } from "react";
-import "./About.scss";
-import Divider from "../../../assets/svg/strengths-waves.svg";
-import { Stack, Typography } from "@mui/material";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import React, { useEffect, useRef } from 'react';
+import './About.scss';
+import Divider from '../../../assets/svg/strengths-waves.svg';
+import { Stack, Typography } from '@mui/material';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Mihai from '../../../assets/img/mihai_bigpic.png';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
   faFacebook,
   faTwitter,
   faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
 function About() {
   const meText = useRef();
   const mePic = useRef();
   const spawnPlace = useRef();
   const experience = useRef();
-  // const education = useRef();
 
   useEffect(() => {
-    document.addEventListener("scroll", scrollEvent);
+    document.addEventListener('scroll', scrollEvent);
   }, []);
 
   const scrollEvent = () => {
@@ -35,9 +35,9 @@ function About() {
 
     transitionValue = Y / 30 - 30;
 
-    let education = document.getElementById("educationCard");
-    let spawnPlace = document.getElementById("spawnPlace");
-    let experience = document.getElementById("experience");
+    let education = document.getElementById('educationCard');
+    let spawnPlace = document.getElementById('spawnPlace');
+    let experience = document.getElementById('experience');
 
     spawnPlace.style.transform = `translateY(-${transitionValue}%)`;
     experience.style.transform = `translateY(${transitionValue}%)`;
@@ -52,7 +52,7 @@ function About() {
 
       <Typography
         variant="h4"
-        sx={{ marginBottom: "5rem", textAlign: "right", marginRight: "5rem" }}
+        sx={{ marginBottom: '5rem', textAlign: 'right', marginRight: '5rem' }}
       >
         ABOUT
       </Typography>
@@ -72,7 +72,7 @@ function About() {
           flexWrap="wrap"
           gap="10rem"
           className="about"
-          sx={{ width: "100%" }}
+          sx={{ width: '100%' }}
         >
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <p id="meText" ref={meText}>
@@ -95,23 +95,20 @@ function About() {
 
           <AnimationOnScroll animateIn="animate__fadeInRight">
             <Stack ref={mePic} gap="1rem" id="mePicContainer">
-              <img
-                id="mePic"
-                src="https://scontent.ftsr1-2.fna.fbcdn.net/v/t39.30808-1/245582200_1714124032127017_8508514677075839217_n.jpg?stp=c0.292.1429.1429a_dst-jpg_s160x160&_nc_cat=105&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeEN_-GqjAOxi36uRoDWpqmrXJz5qccx2B1cnPmpxzHYHVD6sbYog9MQ2vbBPyj2K_P2r3-cFhvmFLIBSkd2FoXe&_nc_ohc=WMFwoVdXu3sAX_yoBXd&_nc_ht=scontent.ftsr1-2.fna&oh=00_AT_m8Hsdbmi9HuuUKxmABIvVi4Y64VME-HATMOwZjJkeBg&oe=624A39A4"
-              />
+              <img id="mePic" src={Mihai} />
               <Stack
                 alignItems="center"
                 justifyContent="space-evenly"
                 direction="row"
                 sx={{
-                  width: "100%",
-                  color: "white",
+                  width: '100%',
+                  color: 'white',
                 }}
               >
                 <button
                   onClick={() => {
                     window
-                      .open("https://www.linkedin.com/in/mihaicira/", "_blank")
+                      .open('https://www.linkedin.com/in/mihaicira/', '_blank')
                       .focus();
                   }}
                 >
@@ -121,7 +118,7 @@ function About() {
                 <button
                   onClick={() => {
                     window
-                      .open("https://www.facebook.com/mihai.cira.7", "_blank")
+                      .open('https://www.facebook.com/mihai.cira.7', '_blank')
                       .focus();
                   }}
                 >
@@ -131,7 +128,7 @@ function About() {
                 <button
                   onClick={() => {
                     window
-                      .open("https://twitter.com/mihai291291", "_blank")
+                      .open('https://twitter.com/mihai291291', '_blank')
                       .focus();
                   }}
                 >
@@ -141,7 +138,7 @@ function About() {
                 <button
                   onClick={() => {
                     window
-                      .open("https://github.com/mihaicira", "_blank")
+                      .open('https://github.com/mihaicira', '_blank')
                       .focus();
                   }}
                 >
@@ -159,28 +156,31 @@ function About() {
           className="aboutMeCardsContainer"
           flexWrap="wrap"
           gap="1rem"
-          sx={{ width: "100%", textAlign: "center", color: "white" }}
+          sx={{ width: '100%', textAlign: 'center', color: 'white' }}
         >
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <Stack direction="column" id="spawnPlace">
               <h5>spawn place</h5>
               <p>Country: Romania</p>
               <p>City: Timișoara</p>
-              <p>Nationality: Romanian</p>
-              <p>Date of birth: 29 May 2000</p>
+              <p>Availability: from anywhere</p>
+              <p>Way of working: Remote / hybrid / on-site</p>
             </Stack>
           </AnimationOnScroll>
 
           <AnimationOnScroll animateIn="animate__fadeInUp">
             <Stack direction="column" id="experience">
               <h5>experience</h5>
-              <p>Web Development (Internship) at Crafting Software</p>
-              <span>from February 2022</span>
+              <p>Web and Mobile Development at Crafting Software</p>
+              <span>starting from February 2022</span>
 
               <p>Mobile Development (Internship) at [e-spres-oh]</p>
               <span>from August 2020 to December 2020</span>
 
-              <p>Web Developer (Volunteer) at Classroom Laboratory (UVT)</p>
+              <p>
+                Web Development (Volunteer) at Classroom Laboratory (West
+                University of Timișoara)
+              </p>
               <span>from November 2019 to January 2022</span>
             </Stack>
           </AnimationOnScroll>

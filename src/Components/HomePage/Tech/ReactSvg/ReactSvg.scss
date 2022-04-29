@@ -1,8 +1,20 @@
 #react-anim {
   transform: scale(1);
-  #react-logo {
+  // #react-logo {
+  //   transform-origin: center;
+  //   animation: 20s reactRotate linear infinite;
+  // }
+
+  #circle-1 {
+    transform-box: fill-box;
     transform-origin: center;
-    animation: 20s reactRotate linear infinite;
+    animation: 17s reactRotate linear infinite;
+  }
+
+  #circle-2 {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: 20s reactRotatei linear infinite;
   }
 }
 
@@ -12,5 +24,14 @@
   }
   to {
     transform: rotateZ(360deg);
+  }
+}
+
+@keyframes reactRotatei {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
   }
 }

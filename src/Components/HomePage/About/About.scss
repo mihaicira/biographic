@@ -1,92 +1,92 @@
-@import "../../../variables";
+@import '../../../variables';
 
 #about-section {
-    width: 100%;
-    background: $--color-blue800;
-    padding-bottom: 10rem;
-    // min-height: 40vh;
-    // height: 40cm;
-    position: relative;
+  width: 100%;
+  background: $--color-blue800;
+  padding-bottom: 10rem;
+  // min-height: 40vh;
+  // height: 40cm;
+  position: relative;
+  clip-path: none !important;
+  overflow: visible;
 
-   
-    button{
-      background: transparent;
-      outline: none;
-      border: none;
+  button {
+    background: transparent;
+    outline: none;
+    border: none;
 
-      transition: 500ms;
-      -o-transition: 500ms;
-      -moz-transition: 500ms;
-      -webkit-transition: 500ms;
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
 
-      cursor: pointer;
+    cursor: pointer;
 
-      &:hover{
-        transform: scale(.8);
-        opacity: .5;
-      }
-
-      *{
-        height: 3rem;
-        width: 3rem;
-        color: white;
-      }
-    }
-    
-    #meText{
-        max-width: 23rem;
-        text-align: center;
-        opacity: 1;
-        @media (max-width: 750px) {
-          max-width: 20rem;
-        }
+    &:hover {
+      transform: scale(0.8);
+      opacity: 0.5;
     }
 
-    .about{
-      &>div:nth-child(1){
-        order: 2;
-      }
+    * {
+      height: 3rem;
+      width: 3rem;
+      color: white;
+    }
+  }
 
-      &>div:nth-child(2){
-        order: 3;
-        @media (max-width: 750px) {
-          max-width: 20rem;
-          order: 1;
-        }
-      }
+  #meText {
+    max-width: 23rem;
+    text-align: center;
+    opacity: 1;
+    @media (max-width: 750px) {
+      max-width: 20rem;
     }
-    
-    #mePic{
-        // BIG PIC
-        width: 20rem;
-        opacity: 1;
-        @media (max-width: 750px) {
-          max-width: 20rem;
-          flex-shrink: 1;
-        }
-        
+  }
+
+  .about {
+    & > div:nth-child(1) {
+      order: 2;
     }
-    
-    .aboutMeCardsContainer{
-      margin-top: 8rem;
-      &>*{
-        width: 18rem;
-      }
-      h5{
-        margin-bottom: 1rem;
-      }
-      p{
-        margin-top: .5rem;
-      }
-      span{
-        font-size: .8rem;
+
+    & > div:nth-child(2) {
+      order: 3;
+      @media (max-width: 750px) {
+        max-width: 20rem;
+        order: 1;
       }
     }
   }
 
-  #about-divider {
-    width: 100%;
-    position: absolute;
-  
-    transform: translateY(-98%);
+  #mePic {
+    // BIG PIC
+    width: 20rem;
+    opacity: 1;
+    @media (max-width: 750px) {
+      max-width: 20rem;
+      flex-shrink: 1;
+    }
   }
+
+  .aboutMeCardsContainer {
+    margin-top: 8rem;
+    & > * {
+      width: 19rem;
+    }
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-top: 0.5rem;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+#about-divider {
+  width: 100%;
+  position: absolute;
+
+  transform: translateY(-98%);
+}

@@ -2,6 +2,9 @@
 .navbar {
   width: 97.5%;
   position: sticky;
+  @media (max-width: 750px) {
+    justify-content: center !important;
+  }
 
   top: 1rem;
 
@@ -34,7 +37,7 @@
     @media (max-width: 750px) {
       background: grey;
       border-radius: 30% 5% 30% 5%;
-      padding: 4px;
+      padding: 5px;
     }
 
     &::before {

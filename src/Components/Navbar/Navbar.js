@@ -24,7 +24,7 @@ export default function Navbar(props) {
       (isHidden == false || isHidden == null)
     ) {
       if (isHidden == null) setIsHidden(true);
-      navbar.current.style.transform = "translateY(-2cm)";
+      navbar.current.style.transform = "translateY(-4cm)";
     }
 
     if (

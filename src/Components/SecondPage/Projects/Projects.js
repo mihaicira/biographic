@@ -1,17 +1,17 @@
-import { Stack } from '@mui/material';
-import React from 'react';
-import './Projects.scss';
+import { Stack } from "@mui/material";
+import React from "react";
+import "./Projects.scss";
 
 export default function Projects() {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <Stack
         sx={{
-          width: 'max-content',
-          margin: '20vh 0 0 10vw',
+          width: "max-content",
+          margin: "20vh 0 0 10vw",
         }}
       >
-        <p>i managed to built these</p>
+        <p style={{ color: "darkgrey" }}>i managed to built these</p>
         <h2>projects</h2>
       </Stack>
       <Stack
@@ -19,7 +19,7 @@ export default function Projects() {
         justifyContent="center"
         direction="column"
         gap="10rem"
-        sx={{ marginTop: '5rem' }}
+        sx={{ marginTop: "5rem" }}
       >
         <Project
           title="Center of francophone studies"
@@ -41,7 +41,7 @@ export default function Projects() {
               each role having its responsabilities.
             </p>
           }
-          tech={['HTML', 'CSS', 'JAVASCRIPT', 'JQUERY', 'FIREBASE']}
+          tech={["HTML", "CSS", "JAVASCRIPT", "JQUERY", "FIREBASE"]}
         />
 
         <Project
@@ -62,7 +62,7 @@ export default function Projects() {
               https://remigoo.herokuapp.com/somerandomstuff
             </p>
           }
-          tech={['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'FIREBASE']}
+          tech={["HTML", "CSS", "JAVASCRIPT", "REACTJS", "FIREBASE"]}
         />
 
         <Project
@@ -81,7 +81,7 @@ export default function Projects() {
               on the website.
             </p>
           }
-          tech={['HTML', 'CSS', 'JAVASCRIPT', 'JQUERY']}
+          tech={["HTML", "CSS", "JAVASCRIPT", "JQUERY"]}
         />
 
         <Project
@@ -102,7 +102,7 @@ export default function Projects() {
               can be found both on the searching page and his own detailed page.
             </p>
           }
-          tech={['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'GRAPHQL']}
+          tech={["HTML", "CSS", "JAVASCRIPT", "REACTJS", "GRAPHQL"]}
         />
 
         <Project
@@ -127,10 +127,10 @@ export default function Projects() {
             </p>
           }
           tech={[
-            'SWIFT',
-            'SWIFTUI LIBRARY',
-            'FIREBASE IOS SDK',
-            'USERDEFAULTS',
+            "SWIFT",
+            "SWIFTUI LIBRARY",
+            "FIREBASE IOS SDK",
+            "USERDEFAULTS",
           ]}
         />
 
@@ -153,21 +153,21 @@ export default function Projects() {
             </p>
           }
           tech={[
-            'HTML',
-            'CSS',
-            'JAVASCRIPT',
-            'REACT',
-            'FIREBASE',
-            'LOCALSTORAGE',
+            "HTML",
+            "CSS",
+            "JAVASCRIPT",
+            "REACT",
+            "FIREBASE",
+            "LOCALSTORAGE",
           ]}
         />
 
-        <Project
+        {/* <Project
           title="title"
           subtitle="subtitle"
           text={<p>text</p>}
           tech={['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'FIREBASE']}
-        />
+        /> */}
       </Stack>
     </div>
   );
@@ -182,7 +182,7 @@ function Project(props) {
       gap="7rem"
       className="project"
       flexWrap="wrap"
-      sx={{ width: '100%' }}
+      sx={{ width: "100%" }}
     >
       <Stack gap="1rem">
         <h4>{props.title}</h4>

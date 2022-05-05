@@ -1,23 +1,30 @@
-import './Tech.scss';
-import { useRef, useEffect } from 'react';
-import { Stack } from '@mui/material';
-import ReactSvg from './ReactSvg/ReactSvg';
-import Firebase from '../../../assets/img/firebase.png';
-import Nodejs from '../../../assets/img/nodejs.png';
-import Postgresql from '../../../assets/img/postgresql.png';
-import Threejs from '../../../assets/img/threejs.png';
-import Phoenix from '../../../assets/img/phoenix.png';
-import Materialui from '../../../assets/img/materialui.png';
-import Jquery from '../../../assets/img/jquery.png';
-import Mongodb from '../../../assets/img/mongodb.png';
+import "./Tech.scss";
+import { useRef, useEffect } from "react";
+import { Stack } from "@mui/material";
+import ReactSvg from "./ReactSvg/ReactSvg";
+import Firebase from "../../../assets/img/firebase.png";
+import Nodejs from "../../../assets/img/nodejs.png";
+import Postgresql from "../../../assets/img/postgresql.png";
+import Threejs from "../../../assets/img/threejs.png";
+import Phoenix from "../../../assets/img/phoenix.png";
+import Materialui from "../../../assets/img/materialui.png";
+import Jquery from "../../../assets/img/jquery.png";
+import Mongodb from "../../../assets/img/mongodb.png";
 
 export default function Tech() {
   const using = useRef();
   const pic = useRef();
 
   useEffect(() => {
-    document.addEventListener('scroll', scrollEvent);
+    document.addEventListener("scroll", scrollEvent);
   }, []);
+
+  useEffect(
+    () => () => {
+      document.removeEventListener("scroll", scrollEvent);
+    },
+    []
+  );
 
   const scrollEvent = () => {
     if (window.innerWidth < 750) return;
@@ -40,7 +47,7 @@ export default function Tech() {
         <div ref={pic}>
           <ReactSvg />
         </div>
-        <h6 style={{ marginTop: '4rem' }}>... and</h6>
+        <h6 style={{ marginTop: "4rem" }}>... and</h6>
       </Stack>
 
       <Stack

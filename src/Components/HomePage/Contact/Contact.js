@@ -1,23 +1,25 @@
-import React, { useRef, useState, useEffect } from 'react';
-import './Contact.scss';
-import Divider from '../../../assets/svg/contact-divider.svg';
-import ThumbsUp from '../../../assets/svg/thumbs_up.svg';
-import { Stack, Alert } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFaceSmile } from '@fortawesome/free-solid-svg-icons';
-import emailjs from 'emailjs-com';
+import React, { useRef, useState, useEffect } from "react";
+import "./Contact.scss";
+import Divider from "../../../assets/svg/contact-divider.svg";
+import ThumbsUp from "../../../assets/svg/thumbs_up.svg";
+import { Stack, Alert } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
   const from = useRef();
   const text = useRef();
   const [warningAlert, setWarningAlert] = useState(false);
   const [successAlert, setSuccessAlert] = useState(false);
+  let navigate = useNavigate();
 
   const sendEmail = () => {
     const fromTxt = from.current.value;
     const textTxt = text.current.value;
 
-    if (textTxt == '') {
+    if (textTxt == "") {
       setSuccessAlert(false);
       setWarningAlert(true);
       setTimeout(() => {
@@ -28,14 +30,14 @@ export default function Contact() {
 
     const date = new Date();
     emailjs.send(
-      'service_c0zrve8',
-      'template_c6iu695',
+      "service_c0zrve8",
+      "template_c6iu695",
       {
         from: fromTxt,
         text: textTxt,
         date: date.toString(),
       },
-      'Mpm1e_o9P8YhwFyNt'
+      "Mpm1e_o9P8YhwFyNt"
     );
 
     setWarningAlert(false);
@@ -43,6 +45,22 @@ export default function Contact() {
     setTimeout(() => {
       setSuccessAlert(false);
     }, 6000);
+  };
+
+  const sendLike = () => {
+    const date = new Date();
+    emailjs.send(
+      "service_c0zrve8",
+      "template_c6iu695",
+      {
+        from: "Automatic",
+        text: "Someone likes your website!",
+        date: date.toString(),
+      },
+      "Mpm1e_o9P8YhwFyNt"
+    );
+
+    navigate("/thanks");
   };
 
   return (
@@ -69,7 +87,7 @@ export default function Contact() {
         alignItems="center"
         justifyContent="center"
         direction="column"
-        sx={{ marginBottom: '5rem', marginTop: '5rem' }}
+        sx={{ marginBottom: "5rem", marginTop: "5rem" }}
       >
         <h1>contact</h1>
         <a href="mailto:ciramihai291@gmail.com">ciramihai291@gmail.com</a>
@@ -81,7 +99,7 @@ export default function Contact() {
         direction="column"
         className="form"
         gap="1rem"
-        sx={{ marginBottom: '5rem' }}
+        sx={{ marginBottom: "5rem" }}
       >
         <input placeholder="from" ref={from} />
         <textarea placeholder="message" ref={text} />
@@ -97,10 +115,10 @@ export default function Contact() {
       >
         <h1>or...</h1>
         <p>
-          hit this ugly like button if you like this website{' '}
+          hit this ugly like button if you like this website{" "}
           <FontAwesomeIcon icon={faFaceSmile} />
         </p>
-        <button>
+        <button onClick={sendLike}>
           <img src={ThumbsUp} />
         </button>
       </Stack>
@@ -111,7 +129,7 @@ export default function Contact() {
 function WarningAlert(props) {
   const alert = useRef();
   useEffect(() => {
-    alert.current.style.opacity = '1';
+    alert.current.style.opacity = "1";
   }, []);
 
   return (
@@ -129,7 +147,7 @@ function WarningAlert(props) {
 function SuccessAlert(props) {
   const alert = useRef();
   useEffect(() => {
-    alert.current.style.opacity = '1';
+    alert.current.style.opacity = "1";
   }, []);
   return (
     <Alert

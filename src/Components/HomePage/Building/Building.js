@@ -18,6 +18,13 @@ function Building() {
     document.addEventListener("scroll", scrollEvent);
   }, []);
 
+  useEffect(
+    () => () => {
+      document.removeEventListener("scroll", scrollEvent);
+    },
+    []
+  );
+
   const scrollEvent = () => {
     if (window.innerWidth < 750) return;
 

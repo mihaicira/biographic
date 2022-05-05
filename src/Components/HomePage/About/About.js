@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import './About.scss';
-import Divider from '../../../assets/svg/strengths-waves.svg';
-import { Stack, Typography } from '@mui/material';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import Mihai from '../../../assets/img/mihai_bigpic.png';
+import React, { useEffect, useRef } from "react";
+import "./About.scss";
+import Divider from "../../../assets/svg/strengths-waves.svg";
+import { Stack, Typography } from "@mui/material";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import Mihai from "../../../assets/img/mihai_bigpic.png";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faFacebook,
   faTwitter,
   faGithub,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
 function About() {
   const meText = useRef();
@@ -20,8 +20,15 @@ function About() {
   const experience = useRef();
 
   useEffect(() => {
-    document.addEventListener('scroll', scrollEvent);
+    document.addEventListener("scroll", scrollEvent);
   }, []);
+
+  useEffect(
+    () => () => {
+      document.removeEventListener("scroll", scrollEvent);
+    },
+    []
+  );
 
   const scrollEvent = () => {
     if (window.innerWidth < 750) return;
@@ -35,9 +42,9 @@ function About() {
 
     transitionValue = Y / 30 - 30;
 
-    let education = document.getElementById('educationCard');
-    let spawnPlace = document.getElementById('spawnPlace');
-    let experience = document.getElementById('experience');
+    let education = document.getElementById("educationCard");
+    let spawnPlace = document.getElementById("spawnPlace");
+    let experience = document.getElementById("experience");
 
     spawnPlace.style.transform = `translateY(-${transitionValue}%)`;
     experience.style.transform = `translateY(${transitionValue}%)`;
@@ -52,7 +59,7 @@ function About() {
 
       <Typography
         variant="h4"
-        sx={{ marginBottom: '5rem', textAlign: 'right', marginRight: '5rem' }}
+        sx={{ marginBottom: "5rem", textAlign: "right", marginRight: "5rem" }}
       >
         ABOUT
       </Typography>
@@ -72,7 +79,7 @@ function About() {
           flexWrap="wrap"
           gap="10rem"
           className="about"
-          sx={{ width: '100%' }}
+          sx={{ width: "100%" }}
         >
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <p id="meText" ref={meText}>
@@ -101,14 +108,14 @@ function About() {
                 justifyContent="space-evenly"
                 direction="row"
                 sx={{
-                  width: '100%',
-                  color: 'white',
+                  width: "100%",
+                  color: "white",
                 }}
               >
                 <button
                   onClick={() => {
                     window
-                      .open('https://www.linkedin.com/in/mihaicira/', '_blank')
+                      .open("https://www.linkedin.com/in/mihaicira/", "_blank")
                       .focus();
                   }}
                 >
@@ -118,7 +125,7 @@ function About() {
                 <button
                   onClick={() => {
                     window
-                      .open('https://www.facebook.com/mihai.cira.7', '_blank')
+                      .open("https://www.facebook.com/mihai.cira.7", "_blank")
                       .focus();
                   }}
                 >
@@ -128,7 +135,7 @@ function About() {
                 <button
                   onClick={() => {
                     window
-                      .open('https://twitter.com/mihai291291', '_blank')
+                      .open("https://twitter.com/mihai291291", "_blank")
                       .focus();
                   }}
                 >
@@ -138,7 +145,7 @@ function About() {
                 <button
                   onClick={() => {
                     window
-                      .open('https://github.com/mihaicira', '_blank')
+                      .open("https://github.com/mihaicira", "_blank")
                       .focus();
                   }}
                 >
@@ -156,7 +163,7 @@ function About() {
           className="aboutMeCardsContainer"
           flexWrap="wrap"
           gap="1rem"
-          sx={{ width: '100%', textAlign: 'center', color: 'white' }}
+          sx={{ width: "100%", textAlign: "center", color: "white" }}
         >
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <Stack direction="column" id="spawnPlace">

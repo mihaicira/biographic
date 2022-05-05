@@ -2,8 +2,11 @@ import { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Waving from "./Waving.js";
 import "./Timmy.scss";
+// import Fallback from "../../../../assets/img/timmy_fallback.png";
 
 var hoverFunction;
+
+// const FallbackComponent = () => <img src={Fallback} />;
 
 function Timmy() {
   const timmy = useRef();

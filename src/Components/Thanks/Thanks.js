@@ -1,8 +1,8 @@
-import React from 'react';
-import './Thanks.scss';
-import { Stack } from '@mui/material';
-import Navbar from '../Navbar/Navbar';
-import { Link } from '@mui/material';
+import React from "react";
+import "./Thanks.scss";
+import { Stack } from "@mui/material";
+import Navbar from "../Navbar/Navbar";
+import { Link } from "@mui/material";
 
 export default function Thanks() {
   return (
@@ -11,22 +11,20 @@ export default function Thanks() {
       justifyContent="center"
       direction="column"
       gap="1rem"
-      sx={{ paddingTop: '5rem' }}
+      sx={{ paddingTop: "5rem" }}
     >
-      <Navbar>
-        <Link to="/">Home</Link>
-        <a href="">Strenghts</a>
-        <a href="">Contact</a>
+      <Navbar sx={{ position: "absolute" }}>
+        <a href="/">Home</a>
       </Navbar>
       <h1>Thank you for your like</h1>
 
       <h6>Here's a walking dog.</h6>
 
-      <div class="dog-container">
-        <div class="bk">
-          <div class="mid">
-            <div class="fore">
-              <div class="figure"></div>
+      <div className="dog-container">
+        <div className="bk">
+          <div className="mid">
+            <div className="fore">
+              <div className="figure"></div>
             </div>
           </div>
         </div>

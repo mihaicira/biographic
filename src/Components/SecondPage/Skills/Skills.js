@@ -1,7 +1,7 @@
-import { Stack } from '@mui/material';
-import React, { useEffect, useRef } from 'react';
-import './Skills.scss';
-import Arrow from '../../../assets/img/arrow.png';
+import { Stack } from "@mui/material";
+import React, { useEffect, useRef } from "react";
+import "./Skills.scss";
+import Arrow from "../../../assets/img/arrow.png";
 
 export default function Skills() {
   const techStack = useRef();
@@ -10,28 +10,35 @@ export default function Skills() {
   const mobileDevRef = useRef();
 
   useEffect(() => {
-    document.addEventListener('scroll', scrollEvent);
+    document.addEventListener("scroll", scrollEvent);
   }, []);
+
+  useEffect(
+    () => () => {
+      document.removeEventListener("scroll", scrollEvent);
+    },
+    []
+  );
 
   const scrollEvent = () => {
     const Y = window.scrollY;
-    techStack.current.style.opacity = Y > 400 ? '0' : '1';
+    techStack.current.style.opacity = Y > 400 ? "0" : "1";
     if (Y < 450 || Y > 1650) {
-      webDevRef.current.style.opacity = '0';
-      softEngRef.current.style.opacity = '0';
-      mobileDevRef.current.style.opacity = '0';
+      webDevRef.current.style.opacity = "0";
+      softEngRef.current.style.opacity = "0";
+      mobileDevRef.current.style.opacity = "0";
     } else if (Y > 1250) {
-      webDevRef.current.style.opacity = '0';
-      softEngRef.current.style.opacity = '0';
-      mobileDevRef.current.style.opacity = '1';
+      webDevRef.current.style.opacity = "0";
+      softEngRef.current.style.opacity = "0";
+      mobileDevRef.current.style.opacity = "1";
     } else if (Y >= 850) {
-      webDevRef.current.style.opacity = '0';
-      softEngRef.current.style.opacity = '1';
-      mobileDevRef.current.style.opacity = '0';
+      webDevRef.current.style.opacity = "0";
+      softEngRef.current.style.opacity = "1";
+      mobileDevRef.current.style.opacity = "0";
     } else if (Y >= 450) {
-      webDevRef.current.style.opacity = '1';
-      softEngRef.current.style.opacity = '0';
-      mobileDevRef.current.style.opacity = '0';
+      webDevRef.current.style.opacity = "1";
+      softEngRef.current.style.opacity = "0";
+      mobileDevRef.current.style.opacity = "0";
     }
   };
 
@@ -39,8 +46,8 @@ export default function Skills() {
     <div className="skills-container">
       <Stack
         sx={{
-          width: 'max-content',
-          margin: '20vh 0 0 10vw',
+          width: "max-content",
+          margin: "20vh 0 0 10vw",
         }}
       >
         <p>using theese</p>
@@ -149,7 +156,7 @@ export default function Skills() {
               <li>NextStep UserDefaults;</li>
             </ul>
 
-            <p style={{ marginTop: '3rem' }}>Looking forward to learn:</p>
+            <p style={{ marginTop: "3rem" }}>Looking forward to learn:</p>
             <ul>
               <li>React Native;</li>
             </ul>

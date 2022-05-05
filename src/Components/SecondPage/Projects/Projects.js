@@ -26,8 +26,12 @@ export default function Projects() {
           subtitle="serverless website platform"
           text={
             <p>
-              Link: click <br /> The Center of Francophone Studies aims to carry
-              out a comprehensive and coherent research program in the field of
+              Link:{" "}
+              <a target="_blank" href="http://csf.uvt.ro/">
+                click
+              </a>{" "}
+              <br /> The Center of Francophone Studies aims to carry out a
+              comprehensive and coherent research program in the field of
               francophonie from the perspective of interculturality and
               interdisciplinarity. The project has been built by a team of six
               people whose team leader was me. <br />
@@ -57,12 +61,36 @@ export default function Projects() {
               profile page. <br /> The online website (the link above) does not
               have the server linked to it, that's why the main functionality
               doesnt work. Though, you can press the "How to book a ticket"
-              button to see the main functionalities. Check out the 404 page
-              too, it's kinda cool:
-              https://remigoo.herokuapp.com/somerandomstuff
+              button to see the main functionalities.
             </p>
           }
           tech={["HTML", "CSS", "JAVASCRIPT", "REACTJS", "FIREBASE"]}
+        />
+
+        <Project
+          title="Personal website"
+          subtitle="personal portfolio website"
+          text={
+            <p>
+              Link:
+              <a target="_blank" href="https://mihaic.vercel.app/">
+                click
+              </a>
+              <br />
+              This is my previous personal portfolio website. It has been
+              created using interesting and various technologies and it's pretty
+              cool in my opinion. Check it out, there are some catchy
+              animations.
+            </p>
+          }
+          tech={[
+            "HTML",
+            "SCSS",
+            "JAVASCRIPT",
+            "REACTJS",
+            "ANALYTICS",
+            "MATERIALUI",
+          ]}
         />
 
         <Project
@@ -70,10 +98,15 @@ export default function Projects() {
           subtitle="educational website"
           text={
             <p>
-              Classroom Laboratory is a classroom where selected courses are
-              taught, an infrastructure for conducting experiments in teaching
-              and methodology methods, and finally an arena for collaboration
-              between students, teachers, researchers and the world of work.
+              Link:{" "}
+              <a target="_blank" href="https://classroomlab.uvt.ro/">
+                click
+              </a>
+              <br /> Classroom Laboratory is a classroom where selected courses
+              are taught, an infrastructure for conducting experiments in
+              teaching and methodology methods, and finally an arena for
+              collaboration between students, teachers, researchers and the
+              world of work.
               <br />
               It is a front-end website only, which I built alone, as a
               volunteer, for the Faculty of Sociology and Psychology (West
@@ -89,9 +122,17 @@ export default function Projects() {
           subtitle="demonstrative website"
           text={
             <p>
-              Link: Rick and Morty Characters The main purpose of the website is
-              to present all characters from Rick and Morty TV Series. The user
-              is able to search the characters by their name and filter by their
+              Link:{" "}
+              <a
+                href="https://mihaicira.github.io/rick-and-morty/"
+                target="_blank"
+              >
+                click
+              </a>
+              <br />
+              Rick and Morty Characters The main purpose of the website is to
+              present all characters from Rick and Morty TV Series. The user is
+              able to search the characters by their name and filter by their
               status: dead, alive, unknown or all.
               <br />
               The user recieves the results as pages, being able to navigate
@@ -139,6 +180,11 @@ export default function Projects() {
           subtitle="mobile web application"
           text={
             <p>
+              Link:{" "}
+              <a target="_blank" href="https://mihaicira.github.io/Choicezz/">
+                click
+              </a>
+              <br />
               Choicezz is the ezz way to make a choice. It's the perfect mobile
               application when you can't decide either to eat some Burger King,
               Tacobell or Mc Donald's. With Choicezz you can let the Gods decide

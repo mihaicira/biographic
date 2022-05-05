@@ -97,7 +97,7 @@ export default function Contact() {
         sx={{ marginBottom: "5rem", marginTop: "5rem" }}
       >
         <h1>contact me</h1>
-        <a href="mailto:ciramihai291@gmail.com">ciramihai291@gmail.com</a>
+        <a href="mailto:mihai.cira.dev@gmail.com">mihai.cira.dev@gmail.com</a>
       </Stack>
 
       <Stack

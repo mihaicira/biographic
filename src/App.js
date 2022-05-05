@@ -10,7 +10,14 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/tech" element={<SecondPage />}></Route>
-        <Route path="/thanks" element={<Thanks />}></Route>
+        <Route
+          path="/thanks"
+          element={<Thanks text="Thank you for your rating" />}
+        ></Route>
+        <Route
+          path="*"
+          element={<Thanks text="Error 404 [not found]. But..." />}
+        />
       </Routes>
     </div>
   );

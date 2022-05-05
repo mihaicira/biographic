@@ -32,7 +32,11 @@ export default function Model({ ...props }) {
   useEffect(() => {
     actions["Armature|mixamo.com|Layer0"].setLoop(THREE.LoopOnce);
     setTimeout(() => {
-      actions["Armature|mixamo.com|Layer0"].play();
+      try {
+        actions["Armature|mixamo.com|Layer0"].play();
+      } catch {
+        //pass
+      }
     }, 1000);
 
     document.addEventListener("scroll", rotateEvent);

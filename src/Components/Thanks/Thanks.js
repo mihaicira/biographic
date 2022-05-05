@@ -4,7 +4,7 @@ import { Stack } from "@mui/material";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "@mui/material";
 
-export default function Thanks() {
+export default function Thanks(props) {
   return (
     <Stack
       alignItems="center"
@@ -16,7 +16,7 @@ export default function Thanks() {
       <Navbar sx={{ position: "absolute" }}>
         <a href="/">Home</a>
       </Navbar>
-      <h1>Thank you for your like</h1>
+      <h1>{props.text}</h1>
 
       <h6>Here's a walking dog.</h6>
 

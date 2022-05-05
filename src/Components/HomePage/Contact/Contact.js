@@ -4,7 +4,14 @@ import Divider from "../../../assets/svg/contact-divider.svg";
 import ThumbsUp from "../../../assets/svg/thumbs_up.svg";
 import { Stack, Alert } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSadTear as cry,
+  faFrown as sad,
+  faMeh as meh,
+  faSmile as smile,
+  faLaughBeam as happy,
+  faTimes as exit,
+} from "@fortawesome/free-solid-svg-icons";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router-dom";
 
@@ -47,14 +54,14 @@ export default function Contact() {
     }, 6000);
   };
 
-  const sendLike = () => {
+  const sendRating = (rating) => {
     const date = new Date();
     emailjs.send(
       "service_c0zrve8",
       "template_c6iu695",
       {
-        from: "Automatic",
-        text: "Someone likes your website!",
+        from: "automatic",
+        text: `New rating: ${rating}/5!`,
         date: date.toString(),
       },
       "Mpm1e_o9P8YhwFyNt"
@@ -89,7 +96,7 @@ export default function Contact() {
         direction="column"
         sx={{ marginBottom: "5rem", marginTop: "5rem" }}
       >
-        <h1>contact</h1>
+        <h1>contact me</h1>
         <a href="mailto:ciramihai291@gmail.com">ciramihai291@gmail.com</a>
       </Stack>
 
@@ -110,17 +117,61 @@ export default function Contact() {
         alignItems="center"
         justifyContent="center"
         direction="column"
-        className="uglybtn"
+        className="feedback"
         gap="1rem"
       >
-        <h1>or...</h1>
-        <p>
-          hit this ugly like button if you like this website{" "}
-          <FontAwesomeIcon icon={faFaceSmile} />
-        </p>
-        <button onClick={sendLike}>
+        <h1>or, since you've come this far...</h1>
+        <p style={{ fontSize: "1rem" }}>Rate my website!</p>
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          direction="row"
+          gap="2rem"
+          sx={{ fontSize: "5rem", color: "white", marginTop: "2rem" }}
+        >
+          <button
+            onClick={() => {
+              sendRating(1);
+            }}
+          >
+            <FontAwesomeIcon icon={cry} />
+          </button>
+
+          <button
+            onClick={() => {
+              sendRating(2);
+            }}
+          >
+            <FontAwesomeIcon icon={sad} />
+          </button>
+
+          <button
+            onClick={() => {
+              sendRating(3);
+            }}
+          >
+            <FontAwesomeIcon icon={meh} />
+          </button>
+
+          <button
+            onClick={() => {
+              sendRating(4);
+            }}
+          >
+            <FontAwesomeIcon icon={smile} />
+          </button>
+
+          <button
+            onClick={() => {
+              sendRating(5);
+            }}
+          >
+            <FontAwesomeIcon icon={happy} />
+          </button>
+        </Stack>
+        {/* <button onClick={sendLike}>
           <img src={ThumbsUp} />
-        </button>
+        </button> */}
       </Stack>
     </div>
   );

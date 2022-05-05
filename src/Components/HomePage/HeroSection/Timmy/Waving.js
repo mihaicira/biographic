@@ -41,9 +41,6 @@ export default function Model({ ...props }) {
 
     document.addEventListener("scroll", rotateEvent);
 
-    // document
-    //   .getElementById("timmyContainer")
-    //   .addEventListener("mouseenter", resetAnim);
     Interval = setInterval(resetAnim, 8000);
   }, []);
 

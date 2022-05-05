@@ -6,8 +6,12 @@ import Tech from "./Tech/Tech";
 import Contact from "./Contact/Contact";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function HomePage() {
+  useEffect(() => {
+    document.title = "Mihai's Website";
+  });
   return (
     <>
       <Navbar>

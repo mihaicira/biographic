@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SecondPage.scss";
 import Skills from "./Skills/Skills";
 import Navbar from "../Navbar/Navbar";
@@ -6,6 +6,9 @@ import Projects from "./Projects/Projects";
 import { Link } from "react-router-dom";
 
 export default function SecondPage() {
+  useEffect(() => {
+    document.title = "Mihai's Website - Tech";
+  });
   return (
     <section id="secondPage">
       <Navbar>

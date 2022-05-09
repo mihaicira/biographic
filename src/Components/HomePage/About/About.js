@@ -179,7 +179,7 @@ function About() {
             <Stack direction="column" id="experience">
               <h5>experience</h5>
               <p>Web and Mobile Development at Crafting Software</p>
-              <span>starting from February 2022</span>
+              <span>From February 2022 to May 2022</span>
 
               <p>Mobile Development (Internship) at [e-spres-oh]</p>
               <span>from August 2020 to December 2020</span>

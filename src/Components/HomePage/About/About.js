@@ -83,7 +83,7 @@ function About() {
         >
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <p id="meText" ref={meText}>
-              I am a highly motivatedComputer Science graduate looking for
+              I am a highly motivated Computer Science graduate looking for
               experience to learn, be challenged, and develop my skills. I have
               been coding since high school, building a great variety of
               programs, such as Sudoku solvers and various games using C++ or

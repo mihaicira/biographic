@@ -178,7 +178,7 @@ function About() {
           <AnimationOnScroll animateIn="animate__fadeInUp">
             <Stack direction="column" id="experience">
               <h5>experience</h5>
-              <p>Web and Mobile Development at Crafting Software</p>
+              <p>Web Development (Internship) at Crafting Software</p>
               <span>From February 2022 to May 2022</span>
 
               <p>Mobile Development (Internship) at [e-spres-oh]</p>
@@ -201,7 +201,7 @@ function About() {
               <p>University: West University of Timișoara</p>
               <span>Faculty: Faculty of Mathematics and Computer Science</span>
               <span>Specialization: Computer Science</span>
-              <span>September 2019 - present</span>
+              <span>September 2019 - July 2022</span>
             </Stack>
           </AnimationOnScroll>
         </Stack>

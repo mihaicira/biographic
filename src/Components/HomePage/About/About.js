@@ -83,20 +83,20 @@ function About() {
         >
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <p id="meText" ref={meText}>
-              A highly motivated 3rd-year Computer Science student looking for
+              I am a highly motivatedComputer Science graduate looking for
               experience to learn, be challenged, and develop my skills. I have
               been coding since high school, building a great variety of
               programs, such as Sudoku solvers and various games using C++ or
               Python. I participated in the Zero Robotics Competition and
               managed to qualify in the semi-finals, with my team made up of
-              fellow classmates. At the beginning of 2020, I have taught Python
-              language to a group of 9th-grade students. I have experience in
-              web development, mobile development, and software development and
-              I'm mainly interested in finding a junior position as a web
-              developer that will take advantage of my acknowledgment and help
-              me grow professionally. I am involved in many web projects and I'm
-              looking forwards to being part of as many interesting projects as
-              I can.
+              fellow classmates. I have taught Python language to a group of
+              9th-grade students. Besides that, I am a web development
+              enthusiast who enjoys creating interesting UI and UX designs. I
+              have been involved in many university web projects as a full-stack
+              developer, being the team leader of a bigger project at my
+              university. I believe that the most important achievement for a
+              web developer is to create an equally good-looking, easy-to-use,
+              and highly functional web application.
             </p>
           </AnimationOnScroll>
 
